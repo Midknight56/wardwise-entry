@@ -1,0 +1,25 @@
+{
+ "note": "Real answers from the live model on 6 Nov 2026. Shown only when the live model cannot answer, labelled Recorded answer.",
+ "answers": [
+  {
+   "key": "[\"why\",21,1,5000]",
+   "text": "Ward 21 has 1.21 votes per $100. Ward 1 has 0.28 votes per $100.",
+   "date": "6 Nov 2026"
+  },
+  {
+   "key": "[\"why\",27,1,5000]",
+   "text": "Ward 27 has 1.2 votes per $100. Ward 1 has 0.28 votes per $100.",
+   "date": "6 Nov 2026"
+  },
+  {
+   "key": "[\"why\",2,42,5000]",
+   "text": "Ward 2 has 1.19 votes per $100 while Ward 42 has 0.3. Ward 2 gets $1,100 for 13.2 new votes, Ward 42 receives $0 for 0 votes.",
+   "date": "6 Nov 2026"
+  },
+  {
+   "key": "[\"move\",21,1,500,5000]",
+   "text": "The move loses 3 votes. Ward 21 ends with $850, Ward 1 with $500.",
+   "date": "6 Nov 2026"
+  }
+ ]
+}
