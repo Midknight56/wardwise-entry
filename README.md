@@ -10,6 +10,18 @@ source is listed in [docs/SOURCES.md](docs/SOURCES.md).
 
 All money in the app is PayPal sandbox test money.
 
+## Judging criteria at a glance
+
+**Technological Implementation.** PayPal Orders v2 for gifts, Payments v2 for capture reads and partial refunds, Payouts for crew pay in one batch per approved payroll, and verified Webhooks. Each money record keeps a receipt for every PayPal call made for it. AI: IBM Granite 4.0 H Micro on Workers AI writes the explanations, and a checker reads every number, ward and comparison in each reply.
+
+**Design.** The city map opens on the number of people who did not vote, and the money pours in ward by ward. Drag the budget and one line says why the last ward moved. AG Grid lists all 50 wards and follows the map.
+
+**Potential Impact.** For a small citywide campaign in Chicago. In 2023, 1,581,564 people were registered and 566,973 ballots were cast. Big campaigns buy voter files; small ones decide in a group chat.
+
+**Innovation/Idea.** A plan a campaign can question, with every dollar it moves traced from its inputs to PayPal's receipt. The same method is tested on the 2019 results, and the wards it got wrong stay outlined in red.
+
+**Presentation.** The video runs 2 minutes 52 seconds. Try it at https://wardwise.midknight-labs.workers.dev with no login, on a phone or a desktop.
+
 ## For judges
 
 Live demo: **https://wardwise.midknight-labs.workers.dev** (no login, desktop or phone browser).
