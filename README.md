@@ -12,15 +12,17 @@ All money in the app is PayPal sandbox test money.
 
 ## Judging criteria at a glance
 
-**Technological Implementation.** PayPal Orders v2 for gifts, Payments v2 for capture reads and partial refunds, Payouts for crew pay in one batch per approved payroll, and verified Webhooks. Each money record keeps a receipt for every PayPal call made for it. AI: IBM Granite 4.0 H Micro on Workers AI writes the explanations, and a checker reads every number, ward and comparison in each reply.
+**In short.** WardWise is for a small citywide campaign in Chicago deciding where its door knocking money goes across 50 wards. Code ranks the wards and moves the budget. An AI explains each move, and a checker reads every number in the reply. Gifts come in through PayPal Orders, a gift over the cap gets a partial refund only after a person approves it, and crews are paid by PayPal Payouts in one approved batch.
 
-**Design.** The city map opens on the number of people who did not vote, and the money pours in ward by ward. Drag the budget and one line says why the last ward moved. AG Grid lists all 50 wards and follows the map.
+**Technological Implementation.** PayPal Orders v2 for gifts, Payments v2 for capture reads and partial refunds, Payouts for crew pay in one batch per approved payroll, and verified Webhooks. Each money record keeps a receipt for every PayPal call made for it. AI: IBM Granite 4.0 H Micro on Workers AI writes the explanations, and a checker reads every number, ward and comparison in each reply. Check it: [src/server/paypal/orders.ts](https://github.com/Midknight56/wardwise-entry/blob/main/src/server/paypal/orders.ts), [src/server/paypal/refunds.ts](https://github.com/Midknight56/wardwise-entry/blob/main/src/server/paypal/refunds.ts), [src/server/paypal/payouts.ts](https://github.com/Midknight56/wardwise-entry/blob/main/src/server/paypal/payouts.ts), [src/server/paypal/webhooks.ts](https://github.com/Midknight56/wardwise-entry/blob/main/src/server/paypal/webhooks.ts), [src/server/ai/ask.ts](https://github.com/Midknight56/wardwise-entry/blob/main/src/server/ai/ask.ts).
 
-**Potential Impact.** For a small citywide campaign in Chicago. In 2023, 1,581,564 people were registered and 566,973 ballots were cast. Big campaigns buy voter files; small ones decide in a group chat.
+**Design.** The city map opens on the number of people who did not vote, and the money pours in ward by ward. Drag the budget and one line says why the last ward moved. AG Grid lists all 50 wards and follows the map. Check it: [src/web/grid.ts](https://github.com/Midknight56/wardwise-entry/blob/main/src/web/grid.ts).
 
-**Innovation/Idea.** A plan a campaign can question, with every dollar it moves traced from its inputs to PayPal's receipt. The same method is tested on the 2019 results, and the wards it got wrong stay outlined in red.
+**Potential Impact.** For a small citywide campaign in Chicago. In 2023, 1,581,564 people were registered and 566,973 ballots were cast. Big campaigns buy voter files; small ones decide in a group chat. Sources: [docs/SOURCES.md](https://github.com/Midknight56/wardwise-entry/blob/main/docs/SOURCES.md).
 
-**Presentation.** The video runs 2 minutes 52 seconds. Try it at https://wardwise.midknight-labs.workers.dev with no login, on a phone or a desktop.
+**Innovation/Idea.** A plan a campaign can question, with every dollar it moves traced from its inputs to PayPal's receipt. The same method is tested on the 2019 results, and the wards it got wrong stay outlined in red. Without it, a small campaign splits its budget by feel and cannot show where a dollar went. Check it: [src/model/allocate.ts](https://github.com/Midknight56/wardwise-entry/blob/main/src/model/allocate.ts), [src/model/explain.ts](https://github.com/Midknight56/wardwise-entry/blob/main/src/model/explain.ts).
+
+**Presentation.** The video runs 2 minutes 52 seconds. Try it at https://wardwise.midknight-labs.workers.dev with no login, on a phone or a desktop. Video guide: 0:09 drag the budget and the wards light up; 0:23 ask why: code does the math; 0:42 a $25 gift with no login; 1:09 a refund over the cap waits for a person; 1:29 payroll shows the exact batch first; 1:50 PayPal Payouts sends it; 2:15 the method checked against the last election.
 
 ## For judges
 
